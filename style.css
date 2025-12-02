@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    background-image: url('flag.png'); /*казалось бы при чём здесь... */
+}
+
+.car{
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+}
+
+.animcontainer{
+    margin-top: 300px;
+    display: flex;
+    justify-content: right;
+    animation-name: CarStartUp;
+    animation-duration: 3s;
+    margin-right: 50px;
+}
+
+.layer{
+    display: flex;
+    flex-direction: row;
+}
+
+.middle{
+    justify-content: center;
+}
+
+.around{
+    justify-content: space-between;
+}
+
+.carblock{
+    background-color: red;
+    min-width: 50px;
+    max-width: 50px;
+    aspect-ratio: 1/1;
+}
+
+.wheel{
+    background-image: url("tire.png");
+    background-size: contain;
+    border-radius: 100%;
+    min-width: 50px;
+    max-width: 50px;
+    aspect-ratio: 1/1;
+
+    animation-name: Rotaton;
+    animation-duration: 3s;
+}
+
+@keyframes CarStartUp{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes Rotaton{
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+         rotate: 720deg;
+    }
+}
